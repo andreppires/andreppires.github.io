@@ -145,7 +145,7 @@ p { margin: 0 0 1rem; color: var(--fg); }
 /* Sections — note specificity: section also has class="container" so we
    need section.container to beat .container's padding shorthand. */
 section.container {
-  padding-top: 2.5rem;
+  padding-top: 1.25rem;
   padding-bottom: 1rem;
 }
 section + section {
