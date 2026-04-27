@@ -1,163 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="icon"
-      type="image/png"
-      href="img/Favicon.png">
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="André Pires — DevOps Engineer at Engine AI. Kubernetes, Helm, Terraform, ArgoCD, AWS, Azure.">
+    <meta name="author" content="André Pires">
 
     <title>André Pires</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">André</span> Pires
-                </a>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#top"><span class="accent">André</span> Pires</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#page-top">UP!</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <!-- section id="header" class="content-section text-center"> -->
-      <header class="intro">
-          <div class="intro-body">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-md-8 col-md-offset-2">
-                          <h1 class="brand-heading">André Pires</h1>
-                          <p class="intro-text">Problem solver<br> Site Reliability Engineer at D-Orbit PT.</p>
-                          <a href="#about" class="btn btn-circle page-scroll">
-                              <i class="fa fa-angle-double-down animated"></i>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </header>
-    <!-- </section> -->
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Hello!</h2>
-                <p>My name André and I'm a SRE at d-Orbit PT.
-                     There I’m responsible to maintain and grown the cloud infrastructure where the services we are developing are running. 
-                     I’m responsible also to evolve our CI/CD pipeline for every service to accelerate our testing process and delivery. 
-                     Currently working essentially with AWS, Kubernetes and Kotlin.</p>
-            </div>
+    <header class="hero">
+        <div class="container hero-content">
+            <img class="avatar" src="img/profile.jpg" alt="André Pires">
+            <h1>André Pires</h1>
+            <p class="hero-tagline">
+                Problem solver.<br>
+                <strong>DevOps Engineer at Engine AI</strong> — Kubernetes, Helm, Terraform, ArgoCD, AWS, Azure.
+            </p>
+            <a href="#experience" class="btn">See experience</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About</h2>
+        <p>
+            I'm a DevOps Engineer based in Lisbon, Portugal. I build and maintain the cloud
+            infrastructure and CI/CD pipelines that let development teams ship reliably.
+        </p>
+        <p class="muted">
+            My day-to-day mix is Kubernetes, Helm, Terraform and ArgoCD across AWS and Azure —
+            with a healthy dose of monitoring (Prometheus) and a focus on tightening security
+            around the data and services we run.
+        </p>
+        <p class="muted">
+            Comfortable pairing with AI coding agents (Claude Code, Copilot) for IaC changes,
+            runbook automation and PR review workflows.
+        </p>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Portfolio</h2>
-                    <p>You can find some of my projects on GitHub.</p>
-                    <a target="_blank" href="https://github.com/andreppires" class="btn btn-default btn-lg">My GitHub Profile</a>
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+
+            <div class="role">
+                <div class="role-period">Nov 2023 — Present</div>
+                <div>
+                    <div class="role-title">DevOps Engineer</div>
+                    <div class="role-company">Engine AI · Lisbon</div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a target="_blank" rel="me" href="https://masto.pt/@andreppires" class="btn btn-default btn-lg"><i class="fa fa-mastodon fa-fw"></i> <span class="network-name">Mastodon</span></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://github.com/andreppires" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://pt.linkedin.com/in/andreppires" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                    </li>
-
-                </ul>
+            <div class="role">
+                <div class="role-period">Aug 2021 — Nov 2023</div>
+                <div>
+                    <div class="role-title">DevOps Engineer</div>
+                    <div class="role-company">D-Orbit · Lisbon</div>
+                    <p class="role-desc">
+                        Owned the infrastructure behind Aurora, a cloud-based Mission Control
+                        platform. Day-to-day with kubectl, Helm, ArgoCD and Terraform; integrated
+                        new tooling for monitoring and data security.
+                    </p>
+                </div>
             </div>
+
+            <div class="role">
+                <div class="role-period">Aug 2020 — Aug 2021</div>
+                <div>
+                    <div class="role-title">Scrum Master</div>
+                    <div class="role-company">D-Orbit · Lisbon</div>
+                    <p class="role-desc">
+                        Stepped into Scrum Master duties for a year — kept the team aligned on
+                        priorities and unblocked interface conflicts between peers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="role">
+                <div class="role-period">Oct 2018 — Jul 2020</div>
+                <div>
+                    <div class="role-title">DevOps Engineer</div>
+                    <div class="role-company">D-Orbit · Lisbon</div>
+                    <p class="role-desc">
+                        Built and maintained the cloud infrastructure for a new product:
+                        Kubernetes on AWS via Kops, Helm-packaged services, and Bitbucket
+                        Pipelines for multi-environment testing and deployment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="role">
+                <div class="role-period">Aug 2018 — Oct 2018</div>
+                <div>
+                    <div class="role-title">Software Developer</div>
+                    <div class="role-company">Nokia · Lisbon</div>
+                    <p class="role-desc">
+                        Evaluated new technologies for the Nokia Performance Manager —
+                        Kubernetes, Docker and Apache NiFi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="role">
+                <div class="role-period">Sep 2016 — Jun 2018</div>
+                <div>
+                    <div class="role-title">Student Researcher</div>
+                    <div class="role-company">Instituto de Telecomunicações · Lisbon</div>
+                    <p class="role-desc">
+                        MSc dissertation: an OSPF extension introducing inter-area
+                        communication channels to compute optimal global paths while
+                        staying compatible with existing OSPF deployments.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Map Section -->
-    <!--<div id="map"></div>-->
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="timeline">
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+            <div class="role">
+                <div class="role-period">2015 — 2018</div>
+                <div>
+                    <div class="role-title">MSc, Telecommunications and Informatics Engineering</div>
+                    <div class="role-company">Instituto Superior Técnico · Lisbon</div>
+                    <p class="role-desc">
+                        Specialisation in Computer Systems Networking and Telecommunications.
+                    </p>
+                </div>
+            </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+            <div class="role">
+                <div class="role-period">2011 — 2015</div>
+                <div>
+                    <div class="role-title">BSc, Telecommunications and Informatics Engineering</div>
+                    <div class="role-company">Instituto Superior Técnico · Lisbon</div>
+                </div>
+            </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+        </div>
+    </section>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5aM2k_3AokyxYgCjssXJmKO_Sa-fFkYs&sensor=false"></script>
+    <section id="projects" class="container">
+        <h2>Projects</h2>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+        <article class="project">
+            <header class="project-head">
+                <h3>OSPF-ABR / Arbitrary Topologies</h3>
+                <span class="project-meta muted">MSc thesis · 2017–2018 · Python</span>
+            </header>
+            <p>
+                An extension of the OSPF routing protocol that lifts the classic two-level
+                area hierarchy and supports arbitrary topologies between Area Border Routers.
+                It introduces new inter-area communication channels so the protocol can
+                compute optimal end-to-end paths across any area layout, while staying
+                backwards-compatible with stock OSPF deployments.
+            </p>
+            <p class="muted">
+                Built and validated as part of my MSc dissertation at Instituto Superior
+                Técnico, supported by Instituto de Telecomunicações.
+            </p>
+            <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://github.com/andreppires/OSPF-ABR_ArbTop">View on GitHub</a>
+        </article>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p class="muted">Find me here:</p>
+        <ul class="contact-list">
+            <li><a class="btn" rel="me" target="_blank" href="https://masto.pt/@andreppires">Mastodon</a></li>
+            <li><a class="btn" target="_blank" href="https://github.com/andreppires">GitHub</a></li>
+            <li><a class="btn" target="_blank" href="https://pt.linkedin.com/in/andreppires">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="container">© André Pires</div>
+    </footer>
 
 </body>
-
 </html>
