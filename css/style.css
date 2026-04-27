@@ -91,7 +91,10 @@ p { margin: 0 0 1rem; color: var(--fg); }
     radial-gradient(1000px 600px at 50% 95%, rgba(37, 99, 235, 0.16), transparent 60%),
     var(--bg);
 }
-.hero-content { padding: 6rem 0 5rem; }
+.hero-content {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
 .hero h1 { margin-bottom: 0.6rem; }
 
 .avatar {
@@ -139,9 +142,11 @@ p { margin: 0 0 1rem; color: var(--fg); }
   color: var(--fg);
 }
 
-/* Sections */
-section {
-  padding: 7rem 0 6rem;
+/* Sections — note specificity: section also has class="container" so we
+   need section.container to beat .container's padding shorthand. */
+section.container {
+  padding-top: 7rem;
+  padding-bottom: 6rem;
 }
 section + section {
   border-top: 1px solid var(--border);
