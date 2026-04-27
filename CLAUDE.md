@@ -10,9 +10,7 @@ There is **no build step**. `index.html` is the site; `css/style.css` is loaded 
 
 ## Deployment
 
-Push to `master` triggers `.github/workflows/deploy.yml`, which uploads the repository as-is (`path: .`) and deploys it to GitHub Pages. There is no Jekyll build executed by the workflow — it uses `actions/upload-pages-artifact` directly, not `actions/jekyll-build-pages`.
-
-`_config.yml` declares `theme: jekyll-theme-cayman` but **this theme is not actually rendered** — the workflow ships the raw files, and `index.html` is a complete document with its own `<head>` and inline structure. Treat `_config.yml` as effectively dead config; do not add Jekyll-specific files (layouts, includes, front matter) expecting them to render.
+Push to `master` triggers `.github/workflows/deploy.yml`, which uploads the repository as-is (`path: .`) and deploys it to GitHub Pages. There is no Jekyll build executed by the workflow — it uses `actions/upload-pages-artifact` directly, not `actions/jekyll-build-pages`. Do not add Jekyll-specific files (`_config.yml`, layouts, includes, front matter) expecting them to render — `index.html` is a complete document and is shipped verbatim.
 
 ## Cache-busting CSS
 
