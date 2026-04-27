@@ -84,9 +84,6 @@ p { margin: 0 0 1rem; color: var(--fg); }
 
 /* Hero — tri-color glow */
 .hero {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
   position: relative;
   background:
     radial-gradient(900px 520px at 15% 12%, rgba(196, 214, 0, 0.28), transparent 60%),
@@ -94,7 +91,10 @@ p { margin: 0 0 1rem; color: var(--fg); }
     radial-gradient(1000px 600px at 50% 95%, rgba(37, 99, 235, 0.16), transparent 60%),
     var(--bg);
 }
-.hero-content { padding: 4rem 0; }
+.hero-content {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
 .hero h1 { margin-bottom: 0.6rem; }
 
 .avatar {
@@ -142,12 +142,16 @@ p { margin: 0 0 1rem; color: var(--fg); }
   color: var(--fg);
 }
 
-/* Sections */
-section {
-  padding: 4.5rem 0;
+/* Sections — note specificity: section also has class="container" so we
+   need section.container to beat .container's padding shorthand. */
+section.container {
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
+section + section {
   border-top: 1px solid var(--border);
 }
-section:first-of-type { border-top: none; }
+section h2 { margin-top: 0; }
 
 /* Card base — accent applied via --card-accent (rotated below) */
 .role,
