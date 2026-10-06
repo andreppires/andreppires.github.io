@@ -20,7 +20,10 @@ Push to `master` triggers `.github/workflows/deploy.yml`, which uploads the repo
 
 The design is built around three brand colors defined as CSS custom properties in `:root`: `--green` / `--green-text`, `--orange`, `--blue`. Two patterns rely on these and are easy to break:
 
-- **Card accent rotation.** `.role` cards in `.timeline` rotate their left-border color via `nth-child(3n+1|3n+2|3n)` rules that set `--card-accent`. Adding/removing/reordering `<div class="role">` elements changes which color each card gets — that's intentional, not a bug.
+- **Timeline accent rotation.** `.role` entries in `.timeline` rotate the colour of their dot and company line via `nth-child(3n+1|3n+2|3n)` rules that set `--card-accent`. Adding/removing/reordering `<div class="role">` elements changes which colour each entry gets — that's intentional, not a bug. `.project` cards instead carry a fixed three-colour top stripe.
+- **Light and dark.** Colours are tokens on `:root`. The dark set is declared twice: under `@media (prefers-color-scheme: dark)` guarded by `:root:not([data-theme="light"])`, and under `:root[data-theme="dark"]`. The nav's `.theme-toggle` sets `data-theme` on `<html>` and saves it to `localStorage` (`theme`); an inline `<script>` in `<head>` re-applies it before first paint. With no saved choice the system preference decides. Add new colours to all three blocks.
+- **Fonts.** Inter Tight (text) and JetBrains Mono (labels, nav, periods) load from Google Fonts in `index.html`; `--font-sans` / `--font-mono` fall back to system faces.
+- **Nav scroll-spy.** The only JavaScript is a small inline `IntersectionObserver` at the bottom of `index.html` that toggles `.is-active` on the nav link for the section in view. Section `id`s and nav `href`s must stay in sync.
 - **Section padding specificity.** `<section>` elements also carry `class="container"`. The `section.container` selector exists specifically to override `.container`'s padding shorthand. Keep that selector form when adjusting section spacing.
 
 The hero `.avatar` is rendered as a circle purely via CSS (`border-radius: 50%`) over a square JPG. The favicon (`img/favicon.png`) is a pre-masked circular PNG generated from `profile.jpg` — regenerate it (not just swap the link) if `profile.jpg` ever changes.
